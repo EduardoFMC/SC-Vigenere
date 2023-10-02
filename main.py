@@ -112,33 +112,34 @@ def found_letter(cipher: str, indice: int, key_len: int, language: str):
                         0.40, 0.02, 2.78, 4.74, 5.05, 10.73, 2.52, 1.20, 6.53, 
                         7.81, 4.34, 4.63, 1.67, 0.01, 0.21, 0.01, 0.47]
     
-    cipher_probabilities = {}
-    cipher_frequencia = []
+    letter_counts = {}
+    letter_frequencies = []
     count_letters = 0
     ajuste = 0
     menor_diferenca = 1e9
 
     for i in range(indice, len(cipher), key_len):
-        cipher_probabilities[cipher[i]] = cipher_probabilities.get(cipher[i], 0) + 1
+        letter_counts[cipher[i]] = letter_counts.get(cipher[i], 0) + 1
         count_letters += 1
     
     for i in ALFABETO:
-        cipher_frequencia.append((cipher_probabilities.get(i, 0) / count_letters) * 100)
+        letter_frequencies.append((letter_counts.get(i, 0) / count_letters) * 100)
     
     for i in range(26):
         diferenca = 0
         for j in range(26):
             if language == "EN":
-                diferenca += abs(eng_probabilities[j] - cipher_frequencia[j])
+                diferenca += abs(eng_probabilities[j] - letter_frequencies[j])
             else:
-                diferenca += abs(pt_probabilities[j] - cipher_frequencia[j])
+                diferenca += abs(pt_probabilities[j] - letter_frequencies[j])
         if diferenca < menor_diferenca:
             menor_diferenca = diferenca
             ajuste = i
         
-        cipher_frequencia = shift_lista(cipher_frequencia)
+        letter_frequencies = shift_lista(letter_frequencies)
         
     return chr(ord('A') + ajuste)
+
     
 
 if __name__ == "__main__":

@@ -2,7 +2,7 @@
 
 Projeto 1 da disciplina de Segurança Computacional da UnB em 2023.2 \
 Universidade de Brasília, Instituto de Ciências Exatas, Departamento de Ciência da Computação. \
-Desenvolvido por: Eduardo Ferreira Marques Cavalcante(202006368) e Pedro Rodrigues Diógenes Macedo(211042739). \
+Desenvolvido por: Eduardo Ferreira Marques Cavalcante(202006368) e Pedro Rodrigues Diógenes Macedo(211042739).
 
 ## Descrição
 

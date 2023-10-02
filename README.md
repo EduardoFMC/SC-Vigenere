@@ -2,7 +2,7 @@
 
 Projeto 1 da disciplina de Segurança Computacional 2023.2 UnB \
 Departamento de Ciência da Computação. \
-Desenvolvido por: Eduardo Ferreira Marques Cavalcante(202006368) - T02 e Pedro Rodrigues Diógenes Macedo(211042739) - T02.
+Desenvolvido por: Eduardo Ferreira Marques Cavalcante(202006368) - T02 e Pedro Rodrigues Diógenes Macedo(211042739) - T01.
 
 ## Descrição
 
